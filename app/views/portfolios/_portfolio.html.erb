@@ -1,17 +1,7 @@
-<div id="<%= dom_id portfolio %>">
-  <p>
-    <strong>Title:</strong>
-    <%= portfolio.title %>
-  </p>
 
-  <p>
-    <strong>Body:</strong>
-    <%= portfolio.body %>
-  </p>
-
-  <p>
-    <strong>Image data:</strong>
-    <%= portfolio.image_data %>
-  </p>
-
+<div class="containter-fluid" id="<%= dom_id portfolio %>" style="background: white; box-shadow: 10px 5px 5px red;" >
+  <p class="text-white bg-black"><strong><%= portfolio.title %></strong></p>
+  <p class="text-white bg-black"><%= portfolio.body %></p>
+  <p><%= image_tag portfolio.image_url, :class=>"img-fluid img-thumbnail border-0" if portfolio.image %></p>
+  <p><%= link_to "Show this project", portfolio %></p>
 </div>

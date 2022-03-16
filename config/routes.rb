@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   get 'pages/home'
-  get 'pages/about'
-  get 'pages/contact'
+  get 'about', to: 'pages#about'
+  get 'contact', to: 'pages#contact'
+
   resources :portfolios
-  resources :blogs
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

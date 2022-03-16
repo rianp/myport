@@ -1,14 +1,11 @@
-<p style="color: green"><%= notice %></p>
 
-<h1>Portfolios</h1>
-
-<div id="portfolios">
-  <% @portfolios.each do |portfolio| %>
-    <%= render portfolio %>
-    <p>
-      <%= link_to "Show this portfolio", portfolio %>
-    </p>
-  <% end %>
+<p></p>
+<div class="container">
+<% @portfolios.each_slice(3) do |portfolio| %>
+  <div class="row">
+    <% portfolio.each do |portfolio| %>
+      <div class="col-md-4"><%= render portfolio %></div>
+    <% end %>
+  </div>
 </div>
-
-<%= link_to "New portfolio", new_portfolio_path %>
+<% end %>

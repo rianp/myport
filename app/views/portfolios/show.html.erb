@@ -3,14 +3,12 @@
 
 <%= render @portfolio %>
 
-<p>
-<strong>Image data:</strong>
-<%= image_tag @portfolio.image_url if @portfolio.image %>
-</p>
-
 <div>
-  <%= link_to "Edit this portfolio", edit_portfolio_path(@portfolio) %> |
-  <%= link_to "Back to portfolios", portfolios_path %>
-
-  <%= button_to "Destroy this portfolio", @portfolio, method: :delete %>
+  <button type="button" class="btn" style="background: white; box-shadow: 10px 5px 5px red;">
+    <%= link_to "Edit this portfolio", edit_portfolio_path(@portfolio) %>
+  </button>
+  <button type="button" class="btn" style="background: white; box-shadow: 10px 5px 5px red;">
+    <%= link_to "Back to portfolios", portfolios_path %>
+  </button>
+  <%= button_to "Delete", @portfolio, method: :delete %>
 </div>
